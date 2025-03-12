@@ -4,7 +4,18 @@ import java.util.HashSet;
 public class HangmanGame {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String[] words = {"java", "python", "hangman", "programming", "developer"};
+        String[] words = {"algorithm","binary","compiler",
+    "debugging","developer","framework","function",
+    "inheritance","iteration","java","destructor",
+    "python","variable","recursion","exception",
+    "array","pointer","syntax", "constructor",
+    "software","hardware","frontend","backend",
+    "database","compiler","interface","object",
+    "class","encapsulation","polymorphism","overloading",
+    "server","client","protocol","loop",
+    "condition","stack","queue","thread",   
+};
+
         String wordToGuess = words[(int) (Math.random() * words.length)];
         char[] guessedWord = new char[wordToGuess.length()];
         HashSet<Character> guessedLetters = new HashSet<>();
@@ -14,7 +25,7 @@ public class HangmanGame {
             guessedWord[i] = '_';
         }
 
-        int lives = 6; // Number of wrong attempts allowed
+        int lives = 6; // wrong attempts
         boolean wordGuessed = false;
 
         System.out.println("Welcome to Hangman!");
